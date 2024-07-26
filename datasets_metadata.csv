@@ -1,0 +1,183 @@
+id,title,description
+COPERNICUS/S2,"Sentinel-2 MSI: MultiSpectral Instrument, Level-1C","Sentinel-2 is a wide-swath, high-resolution, multi-spectral
+imaging mission supporting Copernicus Land Monitoring studies,
+including the monitoring of vegetation, soil and water cover,
+as well as observation of inland waterways and coastal areas.The Sentinel-2 data contain 13 UINT16 spectral bands representing
+TOA reflectance scaled by 10000. See the Sentinel-2 User Handbook
+for details. In addition, three QA bands are present where one
+(QA60) is a bitmask band with cloud mask information. For more
+details, see the full explanation of how cloud masks are computed.Each Sentinel-2 product (zip archive) may contain multiple
+granules. Each granule becomes a separate Earth Engine asset.
+EE asset ids for Sentinel-2 assets have the following format:
+COPERNICUS/S2/20151128T002653_20151128T102149_T56MNN. Here the
+first numeric part represents the sensing date and time, the
+second numeric part represents the product generation date and
+time, and the final 6-character string is a unique granule identifier
+indicating its UTM grid reference (see MGRS).The Level-2 data produced by ESA can be found in the collection
+COPERNICUS/S2_SR.Clouds can be mostly removed by using
+COPERNICUS/S2_CLOUD_PROBABILITY.
+See
+this tutorial
+explaining how to apply the cloud mask.For more details on Sentinel-2 radiometric resolution, see this page.Provider: European Union/ESA/CopernicusRevisit Interval
+  5 days
+BandsNameDescriptionB1AerosolsB2BlueB3GreenB4RedB5Red Edge 1B6Red Edge 2B7Red Edge 3B8NIRB8ARed Edge 4B9Water vaporB10CirrusB11SWIR 1B12SWIR 2QA10Always emptyQA20Always emptyQA60Cloud mask
+      Bitmask for QA60
+
+          Bit 10: Opaque clouds
+0: No opaque clouds1: Opaque clouds present
+          Bit 11: Cirrus clouds
+0: No cirrus clouds1: Cirrus clouds presentImage PropertiesNameTypeDescriptionCLOUDY_PIXEL_PERCENTAGEDOUBLEGranule-specific cloudy pixel percentage taken from the original metadataCLOUD_COVERAGE_ASSESSMENTDOUBLECloudy pixel percentage for the whole archive that
+contains this granule. Taken from the original metadataDATASTRIP_IDSTRINGUnique identifier of the datastrip Product Data Item (PDI)DATATAKE_IDENTIFIERSTRINGUniquely identifies a given Datatake. The ID contains
+the Sentinel-2 satellite, start date and time, absolute orbit
+number, and processing baseline.DATATAKE_TYPESTRINGMSI operation modeDEGRADED_MSI_DATA_PERCENTAGEDOUBLEPercentage of degraded MSI and ancillary dataFORMAT_CORRECTNESSSTRINGSynthesis of the On-Line Quality Control (OLQC) checks
+performed at granule (Product_Syntax) and datastrip (Product
+Syntax and DS_Consistency) levelsGENERAL_QUALITYSTRINGSynthesis of the OLQC checks performed at the datastrip level (Relative_Orbit_Number)GENERATION_TIMEDOUBLEProduct generation timeGEOMETRIC_QUALITYSTRINGSynthesis of the OLQC checks performed at the datastrip level (Attitude_Quality_Indicator)GRANULE_IDSTRINGUnique identifier of the granule PDI (PDI_ID)MEAN_INCIDENCE_AZIMUTH_ANGLE_B1DOUBLEMean value containing viewing incidence azimuth angle average for band B1 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B2DOUBLEMean value containing viewing incidence azimuth angle average for band B2 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B3DOUBLEMean value containing viewing incidence azimuth angle average for band B3 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B4DOUBLEMean value containing viewing incidence azimuth angle average for band B4 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B5DOUBLEMean value containing viewing incidence azimuth angle average for band B5 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B6DOUBLEMean value containing viewing incidence azimuth angle average for band B6 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B7DOUBLEMean value containing viewing incidence azimuth angle average for band B7 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B8DOUBLEMean value containing viewing incidence azimuth angle average for band B8 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B8ADOUBLEMean value containing viewing incidence azimuth angle average for band B8a and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B9DOUBLEMean value containing viewing incidence azimuth angle average for band B9 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B10DOUBLEMean value containing viewing incidence azimuth angle average for band B10 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B11DOUBLEMean value containing viewing incidence azimuth angle average for band B11 and for all detectorsMEAN_INCIDENCE_AZIMUTH_ANGLE_B12DOUBLEMean value containing viewing incidence azimuth angle average for band B12 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B1DOUBLEMean value containing viewing incidence zenith angle average for band B1 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B2DOUBLEMean value containing viewing incidence zenith angle average for band B2 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B3DOUBLEMean value containing viewing incidence zenith angle average for band B3 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B4DOUBLEMean value containing viewing incidence zenith angle average for band B4 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B5DOUBLEMean value containing viewing incidence zenith angle average for band B5 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B6DOUBLEMean value containing viewing incidence zenith angle average for band B6 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B7DOUBLEMean value containing viewing incidence zenith angle average for band B7 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B8DOUBLEMean value containing viewing incidence zenith angle average for band B8 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B8ADOUBLEMean value containing viewing incidence zenith angle average for band B8a and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B9DOUBLEMean value containing viewing incidence zenith angle average for band B9 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B10DOUBLEMean value containing viewing incidence zenith angle average for band B10 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B11DOUBLEMean value containing viewing incidence zenith angle average for band B11 and for all detectorsMEAN_INCIDENCE_ZENITH_ANGLE_B12DOUBLEMean value containing viewing incidence zenith angle average for band B12 and for all detectorsMEAN_SOLAR_AZIMUTH_ANGLEDOUBLEMean value containing sun azimuth angle average for all bands and detectorsMEAN_SOLAR_ZENITH_ANGLEDOUBLEMean value containing sun zenith angle average for all bands and detectorsMGRS_TILESTRINGUS-Military Grid Reference System (MGRS) tilePROCESSING_BASELINESTRINGConfiguration baseline used at the time of the product
+generation in terms of processor software version and major Ground
+Image Processing Parameters (GIPP) versionPRODUCT_IDSTRINGThe full id of the original Sentinel-2 productRADIOMETRIC_QUALITYSTRINGBased on the OLQC reports contained in the Datastrips/QI_DATA with RADIOMETRIC_QUALITY checklist nameREFLECTANCE_CONVERSION_CORRECTIONDOUBLEEarth-Sun distance correction factorSENSING_ORBIT_DIRECTIONSTRINGImaging orbit directionSENSING_ORBIT_NUMBERDOUBLEImaging orbit numberSENSOR_QUALITYSTRINGSynthesis of the OLQC checks performed at granule
+(Missing_Lines, Corrupted_ISP, and Sensing_Time) and datastrip
+(Degraded_SAD and Datation_Model) levelsSOLAR_IRRADIANCE_B1DOUBLEMean solar exoatmospheric irradiance for band B1SOLAR_IRRADIANCE_B2DOUBLEMean solar exoatmospheric irradiance for band B2SOLAR_IRRADIANCE_B3DOUBLEMean solar exoatmospheric irradiance for band B3SOLAR_IRRADIANCE_B4DOUBLEMean solar exoatmospheric irradiance for band B4SOLAR_IRRADIANCE_B5DOUBLEMean solar exoatmospheric irradiance for band B5SOLAR_IRRADIANCE_B6DOUBLEMean solar exoatmospheric irradiance for band B6SOLAR_IRRADIANCE_B7DOUBLEMean solar exoatmospheric irradiance for band B7SOLAR_IRRADIANCE_B8DOUBLEMean solar exoatmospheric irradiance for band B8SOLAR_IRRADIANCE_B8ADOUBLEMean solar exoatmospheric irradiance for band B8aSOLAR_IRRADIANCE_B9DOUBLEMean solar exoatmospheric irradiance for band B9SOLAR_IRRADIANCE_B10DOUBLEMean solar exoatmospheric irradiance for band B10SOLAR_IRRADIANCE_B11DOUBLEMean solar exoatmospheric irradiance for band B11SOLAR_IRRADIANCE_B12DOUBLEMean solar exoatmospheric irradiance for band B12SPACECRAFT_NAMESTRINGSentinel-2 spacecraft name: Sentinel-2A, Sentinel-2BTerms of UseThe use of Sentinel data is governed by the Copernicus
+Sentinel Data Terms and Conditions.
+  table.eecat {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 13px;
+  }
+  table.eecat td, tr, th {
+  text-align: left; vertical-align: top;
+  border: 1px solid gray; padding: 3px;
+  }
+  td.nobreak { white-space: nowrap; }
+"
+MODIS/006/MOD13A1,MOD13A1.006 Terra Vegetation Indices 16-Day Global 500m,"The MOD13A1 V6 product provides a Vegetation Index (VI)
+value at a per pixel basis. There are two primary vegetation layers.
+The first is the Normalized Difference Vegetation Index (NDVI)
+which is referred to as the continuity index to the existing National
+Oceanic and Atmospheric Administration-Advanced Very High Resolution
+Radiometer (NOAA-AVHRR) derived NDVI. The second vegetation layer
+is the Enhanced Vegetation Index (EVI) that minimizes canopy background
+variations and maintains sensitivity over dense vegetation conditions.
+The EVI also uses the blue band to remove residual atmosphere contamination
+caused by smoke and sub-pixel thin cloud clouds. The MODIS NDVI
+and EVI products are computed from atmospherically corrected bi-directional
+surface reflectances that have been masked for water, clouds, heavy
+aerosols, and cloud shadows.Documentation:User&#39;s GuideAlgorithm Theoretical Basis Document (ATBD)General DocumentationProvider: NASA LP DAAC at the USGS EROS CenterResolution500 meters
+Cadence
+  16 days
+BandsNameDescriptionNDVINormalized Difference Vegetation IndexEVIEnhanced Vegetation IndexDetailedQAVI quality indicators
+      Bitmask for DetailedQA
+
+          Bits 0-1: VI quality (MODLAND QA Bits)
+0: VI produced with good quality1: VI produced, but check other QA2: Pixel produced, but most probably cloudy3: Pixel not produced due to other reasons than clouds
+          Bits 2-5: VI usefulness
+0: Highest quality1: Lower quality2: Decreasing quality4: Decreasing quality8: Decreasing quality9: Decreasing quality10: Decreasing quality12: Lowest quality13: Quality so low that it is not useful14: L1B data faulty15: Not useful for any other reason/not processed
+          Bits 6-7: Aerosol Quantity
+0: Climatology1: Low2: Intermediate3: High
+          Bit 8: Adjacent cloud detected
+0: No1: Yes
+          Bit 9: Atmosphere BRDF correction
+0: No1: Yes
+          Bit 10: Mixed Clouds
+0: No1: Yes
+          Bits 11-13: Land/water mask
+0: Shallow ocean1: Land (nothing else but land)2: Ocean coastlines and lake shorelines3: Shallow inland water4: Ephemeral water5: Deep inland water6: Moderate or continental ocean7: Deep ocean
+          Bit 14: Possible snow/ice
+0: No1: Yes
+          Bit 15: Possible shadow
+0: No1: Yessur_refl_b01Red surface reflectancesur_refl_b02NIR surface reflectancesur_refl_b03Blue surface reflectancesur_refl_b07MIR surface reflectanceViewZenithView zenith angleSolarZenithSolar zenith angleRelativeAzimuthRelative azimuth angleDayOfYearJulian day of yearSummaryQAQuality reliability of VI pixel
+      Bitmask for SummaryQA
+
+          Bits 0-1: VI quality (MODLAND QA Bits)
+0: Good data, use with confidence1: Marginal data, useful but look at detailed QA for more information2: Pixel covered with snow/ice3: Pixel is cloudyTerms of UseMODIS data and products acquired through the LP DAAC
+have no restrictions on subsequent use, sale, or redistribution.Dataset's DOI(s)https://doi.org/10.5067/MODIS/MOD13A1.006Suggested citation(s)Please visit LP DAAC &#39;Citing Our Data&#39; page
+for information on citing LP DAAC datasets.
+  table.eecat {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 13px;
+  }
+  table.eecat td, tr, th {
+  text-align: left; vertical-align: top;
+  border: 1px solid gray; padding: 3px;
+  }
+  td.nobreak { white-space: nowrap; }
+"
+NOAA/DMSP-OLS/NIGHTTIME_LIGHTS,"DMSP OLS: Nighttime Lights Time Series Version 4, Defense Meteorological Program Operational Linescan System","The Defense Meteorological Program (DMSP) Operational Line-Scan System
+(OLS) has a unique capability to detect visible and near-infrared (VNIR)
+emission sources at night.Version 4 of the DMSP-OLS Nighttime Lights Time Series consists of
+cloud-free composites made using all the available archived DMSP-OLS smooth
+resolution data for calendar years. In cases where two satellites were
+collecting data, two composites were produced.Provider: Earth Observation Group, Payne Institute for Public Policy, Colorado School of MinesResolution927.67 meters
+BandsNameDescriptionavg_visThe average of the visible band digital number values with no further filtering.stable_lightsThe cleaned up avg_vis contains the lights from cities,
+towns, and other sites with persistent lighting, including gas flares.
+Ephemeral events, such as fires, have been discarded. The background noise
+was identified and replaced with values of zero.cf_cvgCloud-free coverages tally the total number of observations
+that went into each 30-arc second grid cell. This band can be used to
+identify areas with low numbers of observations where the quality is
+reduced.avg_lights_x_pctThe average visible band digital number (DN) of cloud-free
+light detections multiplied by the percent frequency of light detection.
+The inclusion of the percent frequency of detection term normalizes the
+resulting digital values for variations in the persistence of lighting.
+For instance, the value for a light only detected half the time is
+discounted by 50%. Note that this product contains detections from fires
+and a variable amount of background noise.Image and data processing by NOAA&#39;s National Geophysical Data Center.
+DMSP data collected by US Air Force Weather Agency.Terms of UseNOAA data, information, and products, regardless of the method of delivery,
+are not subject to copyright and carry no restrictions on their subsequent
+use by the public. Once obtained, they may be put to any lawful use. The
+forgoing data is in the public domain and is being provided without
+restriction on use and distribution.
+  table.eecat {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 13px;
+  }
+  table.eecat td, tr, th {
+  text-align: left; vertical-align: top;
+  border: 1px solid gray; padding: 3px;
+  }
+  td.nobreak { white-space: nowrap; }
+"
+NASA/GPM_L3/IMERG_V06,GPM: Global Precipitation Measurement (GPM) v6,"Global Precipitation Measurement (GPM) is an international
+satellite mission to provide next-generation observations of
+rain and snow worldwide every three hours. The Integrated Multi-satellitE
+Retrievals for GPM (IMERG) is the unified algorithm that provides
+rainfall estimates combining data from all passive-microwave
+instruments in the GPM Constellation.This algorithm is intended to intercalibrate, merge, and interpolate
+all satellite microwave precipitation estimates, together with
+microwave-calibrated infrared (IR) satellite estimates, precipitation
+gauge analyses, and potentially other precipitation estimators at fine
+time and space scales for the TRMM and GPM eras over the entire globe.
+The system is run several times for each observation time, first
+giving a quick estimate and successively providing better estimates
+as more data arrive. The final step uses monthly gauge data to
+create research-level products. See IMERG Technical Documentation
+for more details on the algorithm.Documentation:
+* Algorithm Theoretical Basis DocumentIMERG Quality IndexCaveats for IMERG extension into TRMM eraIMERG Technical DocumentationRelease notes; New Morphing algorithmRemote-Sensing ReflectanceAnomaliesThis collection contains provisional
+products that are regularly replaced with updated versions when
+the data become available. The products are marked with a metadata
+property called &#39;status&#39;. When a product is initially made available,
+the property value is &#39;provisional&#39;. Once a provisional product
+has been updated with the final version, this value is updated
+to &#39;permanent&#39;.This collection contains data from:GPM_3IMERGHH_V06 doi:10.5067/GPM/IMERG/3B-HH-L/06GPM_3IMERGHH_06 doi:10.5067/GPM/IMERG/3B-HH/06Provider: NASA GES DISC at NASA Goddard Space Flight CenterResolution11132 meters
+Cadence
+  30 minutes
+BandsNameDescriptionHQobservationTimePMW source timeHQprecipSourcePMW source sensor identifier
+      Bitmask for HQprecipSource
+
+          Bits 0-3: PMW source sensor identifier
+0: No observation1: TMI2: (unused)3: AMSR4: SSMI5: SSMIS6: AMSU7: MHS8: SAPHIR9: GMI10: (unused)11: ATMS12: AIRS13: TOVS14: CRISHQprecipitationmerged PMW precipitationIRkalmanFilterWeightKalman filter weight for IRIRprecipitationIR precipitationprecipitationCalsnapshot precipitation - calibratedprecipitationUncalsnapshot precipitation - uncalibratedprobabilityLiquidPrecipitationprobability of liquid precipitation phaserandomErrorcalibrated-precipitation random errorTerms of UsesAll NASA-produced data from the GPM mission is made
+freely available for the public to use.Dataset's DOI(s)https://doi.org/10.5067/GPM/IMERG/3B-HH-L/06https://doi.org/10.5067/GPM/IMERG/3B-HH/06Suggested citation(s)Huffman, G.J., E.F. Stocker, D.T. Bolvin, E.J. Nelkin, Jackson Tan (2019),
+GPM IMERG Final Precipitation L3 Half Hourly 0.1 degree x 0.1 degree V06,
+Greenbelt, MD, Goddard Earth Sciences Data and Information Services Center
+(GES DISC), Accessed: [Data Access Date],
+doi:10.5067/GPM/IMERG/3B-HH/06
+  table.eecat {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 13px;
+  }
+  table.eecat td, tr, th {
+  text-align: left; vertical-align: top;
+  border: 1px solid gray; padding: 3px;
+  }
+  td.nobreak { white-space: nowrap; }
+"

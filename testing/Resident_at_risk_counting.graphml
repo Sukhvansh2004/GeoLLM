@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="data_path" attr.type="string"/>
+<key id="d0" for="node" attr.name="node_type" attr.type="string"/>
+<graph edgedefault="directed"><node id="france_admin_shp_path">
+  <data key="d0">data</data>
+  <data key="d1">shapefiles/france_admin_regions.shp</data>
+  <data key="d2">Path to France administrative regions shapefile</data>
+</node>
+<node id="load_france_admin_shp">
+  <data key="d0">operation</data>
+  <data key="d2">Load France administrative regions shapefile</data>
+</node>
+<node id="france_admin_gdf">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">GeoDataFrame of France administrative regions</data>
+</node>
+<node id="human_mobility_data_path">
+  <data key="d0">data</data>
+  <data key="d1">data/human_mobility_2020.csv</data>
+  <data key="d2">Path to human mobility data for 2020</data>
+</node>
+<node id="load_human_mobility_data">
+  <data key="d0">operation</data>
+  <data key="d2">Load human mobility data for 2020</data>
+</node>
+<node id="human_mobility_df">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">DataFrame of human mobility data for 2020</data>
+</node>
+<node id="calculate_monthly_change_rates">
+  <data key="d0">operation</data>
+  <data key="d2">Calculate monthly change rates based on January 2020</data>
+</node>
+<node id="monthly_change_rates_df">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">DataFrame of monthly change rates</data>
+</node>
+<node id="join_change_rates_to_gdf">
+  <data key="d0">operation</data>
+  <data key="d2">Join change rates to GeoDataFrame</data>
+</node>
+<node id="france_admin_change_gdf">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">GeoDataFrame of France administrative regions with change rates</data>
+</node>
+<node id="generate_choropleth_maps">
+  <data key="d0">operation</data>
+  <data key="d2">Generate choropleth maps for each month</data>
+</node>
+<node id="monthly_choropleth_maps">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">List of choropleth maps for each month</data>
+</node>
+<node id="generate_line_chart">
+  <data key="d0">operation</data>
+  <data key="d2">Generate line chart for monthly change rate trends</data>
+</node>
+<node id="line_chart_trends">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">Line chart for monthly change rate trends</data>
+</node>
+<edge source="france_admin_shp_path" target="load_france_admin_shp"/>
+<edge source="load_france_admin_shp" target="france_admin_gdf"/>
+<edge source="france_admin_gdf" target="join_change_rates_to_gdf"/>
+<edge source="human_mobility_data_path" target="load_human_mobility_data"/>
+<edge source="load_human_mobility_data" target="human_mobility_df"/>
+<edge source="human_mobility_df" target="calculate_monthly_change_rates"/>
+<edge source="calculate_monthly_change_rates" target="monthly_change_rates_df"/>
+<edge source="monthly_change_rates_df" target="join_change_rates_to_gdf"/>
+<edge source="monthly_change_rates_df" target="generate_line_chart"/>
+<edge source="join_change_rates_to_gdf" target="france_admin_change_gdf"/>
+<edge source="france_admin_change_gdf" target="generate_choropleth_maps"/>
+<edge source="generate_choropleth_maps" target="monthly_choropleth_maps"/>
+<edge source="generate_line_chart" target="line_chart_trends"/>
+</graph></graphml>

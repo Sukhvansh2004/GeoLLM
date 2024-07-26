@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="data_path" attr.type="string"/>
+<key id="d0" for="node" attr.name="node_type" attr.type="string"/>
+<graph edgedefault="directed"><node id="hazardous_waste_facilities_shapefile">
+  <data key="d0">data</data>
+  <data key="d1">https://github.com/gladcolor/LLM-Geo/raw/master/overlay_analysis/HW_Sites_EPSG4326.zip</data>
+  <data key="d2">NC hazardous waste facility ESRI shape file</data>
+</node>
+<node id="tract_boundary_shapefile">
+  <data key="d0">data</data>
+  <data key="d1">https://github.com/gladcolor/LLM-Geo/raw/master/overlay_analysis/tract_37_EPSG4326.zip</data>
+  <data key="d2">NC tract boundary shapefile</data>
+</node>
+<node id="tract_population_csv">
+  <data key="d0">data</data>
+  <data key="d1">https://github.com/gladcolor/LLM-Geo/raw/master/overlay_analysis/NC_tract_population.csv</data>
+  <data key="d2">NC tract population CSV file</data>
+</node>
+<node id="load_hazardous_waste_facilities">
+  <data key="d0">operation</data>
+  <data key="d2">Load NC hazardous waste facility shapefile</data>
+</node>
+<node id="load_tract_boundaries">
+  <data key="d0">operation</data>
+  <data key="d2">Load NC tract boundary shapefile</data>
+</node>
+<node id="load_tract_population">
+  <data key="d0">operation</data>
+  <data key="d2">Load NC tract population CSV file</data>
+</node>
+<node id="find_tracts_with_hazardous_waste_facilities">
+  <data key="d0">operation</data>
+  <data key="d2">Find Census tracts containing hazardous waste facilities</data>
+</node>
+<node id="compute_population_in_hazardous_tracts">
+  <data key="d0">operation</data>
+  <data key="d2">Compute population living in tracts with hazardous waste facilities</data>
+</node>
+<node id="join_population_to_tracts">
+  <data key="d0">operation</data>
+  <data key="d2">Join population data to tract boundaries</data>
+</node>
+<node id="generate_choropleth_map">
+  <data key="d0">operation</data>
+  <data key="d2">Generate population choropleth map for all tract polygons in NC</data>
+</node>
+<node id="hazardous_waste_facilities_data">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">Loaded hazardous waste facility data</data>
+</node>
+<node id="tract_boundaries_data">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">Loaded tract boundary data</data>
+</node>
+<node id="tract_population_data">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">Loaded tract population data</data>
+</node>
+<node id="tracts_with_hazardous_waste">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">Tracts containing hazardous waste facilities</data>
+</node>
+<node id="population_in_hazardous_tracts">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">Population living in tracts with hazardous waste facilities</data>
+</node>
+<node id="tracts_with_population">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">Tract boundaries with population data</data>
+</node>
+<node id="final_choropleth_map">
+  <data key="d0">data</data>
+  <data key="d1"></data>
+  <data key="d2">Final population choropleth map with highlighted hazardous waste tracts</data>
+</node>
+<edge source="hazardous_waste_facilities_shapefile" target="load_hazardous_waste_facilities"/>
+<edge source="tract_boundary_shapefile" target="load_tract_boundaries"/>
+<edge source="tract_population_csv" target="load_tract_population"/>
+<edge source="load_hazardous_waste_facilities" target="hazardous_waste_facilities_data"/>
+<edge source="load_tract_boundaries" target="tract_boundaries_data"/>
+<edge source="load_tract_population" target="tract_population_data"/>
+<edge source="find_tracts_with_hazardous_waste_facilities" target="tracts_with_hazardous_waste"/>
+<edge source="compute_population_in_hazardous_tracts" target="population_in_hazardous_tracts"/>
+<edge source="join_population_to_tracts" target="tracts_with_population"/>
+<edge source="generate_choropleth_map" target="final_choropleth_map"/>
+<edge source="hazardous_waste_facilities_data" target="find_tracts_with_hazardous_waste_facilities"/>
+<edge source="tract_boundaries_data" target="find_tracts_with_hazardous_waste_facilities"/>
+<edge source="tract_boundaries_data" target="join_population_to_tracts"/>
+<edge source="tract_population_data" target="compute_population_in_hazardous_tracts"/>
+<edge source="tract_population_data" target="join_population_to_tracts"/>
+<edge source="tracts_with_hazardous_waste" target="compute_population_in_hazardous_tracts"/>
+<edge source="tracts_with_hazardous_waste" target="generate_choropleth_map"/>
+<edge source="tracts_with_population" target="generate_choropleth_map"/>
+</graph></graphml>
